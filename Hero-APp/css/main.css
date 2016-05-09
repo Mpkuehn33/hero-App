@@ -1,0 +1,97 @@
+h3{
+text-align: center;
+}
+
+.container{
+  margin: auto;
+  border: solid black;
+  text-align: center;
+  height: 580px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.create{
+  width: 50%;
+  margin: auto;
+  float: right; 
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(210, 210, 210);
+  color: blue;
+  font-weight: bold;
+  height: 560px;
+  border-radius: 0 20px 20px 0;
+}
+
+.merge{
+  display: none;
+  width: 50%;
+  margin: auto;
+  float: right;
+  text-align: center;
+  background-color: rgb(210, 210, 210);
+  color: blue;
+  font-weight: bold;
+  height: 560px;
+  border-radius: 0 20px 20px 0;
+}
+
+.mergeContainer{
+  margin-top: 50px;
+}
+
+.create form{
+  margin-top: 25px;
+}
+
+.orMerge{
+  color: blue;
+  cursor: pointer;
+  font-size: 10px;
+  text-decoration: underline;
+}
+
+.view{
+  width: 50%;
+  margin: auto;
+  display: inline-block;
+  text-align: center;
+  background-color: blue;
+  border-radius: 20px 0 0 20px;
+  height: 560px;
+  color: rgb(210, 210, 210);
+  font-weight: bold;
+}
+
+.buttons{
+  position: absolute;
+  bottom: 25px;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  color: blue;
+}
+
+.prev{
+  margin: auto;
+  display: inline-block;
+  background-color: rgb(210, 210, 210);
+  cursor: pointer;
+  width: 75px;
+  border-radius: 5px;
+}
+
+.next{
+  margin: auto;
+  display: inline-block;
+  background-color: rgb(210, 210,210);
+  cursor: pointer;
+  width: 75px;
+  border-radius: 5px;
+}
+
+.hero{
+  margin-top: 45px;
+}
+

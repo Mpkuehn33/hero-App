@@ -1,0 +1,93 @@
+<html>
+  <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src=js/main.js></script>
+  </head>
+  <body>
+    <h3>
+      Heroes
+    </h3>
+    <div class="container">
+      <div class="view">
+        <!--View Existing Heroes -->
+        View Existing Heroes
+        <div class="hero">
+
+        </div>
+        <div class="buttons">
+          <div class="prev" onclick="prevHero()">
+            Previous
+          </div>
+          <div class="next" onclick="nextHero()">
+            Next
+          </div>
+        </div>
+      </div>
+      <div class="create">
+        <!--Create own hero-->
+        Create Your own Hero
+        <p class="orMerge" id="orMerge" onclick="mergeInstead()">or merge two existing Heroes</p>
+        <form id="createForm">
+          Basic Info <br>
+          Hero Name: <input id="hero_name" type="text" name="real_name" value="Enter Hero Name"><br>
+          Civilian name: <input id="real_name" type="text" name="lname" value="Enter Civilian Name"><br>
+          Gender: <input id="gender" type="text" name="gender" value="We're 'PC', type your own gender. "><br>
+          Attributes <br>
+          Intelligence: <input id="intelligence" size="3" type="text" name="attributes" value="Enter Civilian Name"><br>
+          Strength: <input id="strength" size="3"  type="text" name="attributes" value="Enter Civilian Name"><br>
+          Speed: <input id="speed" size="3"  type="text" name="attributes" value="Enter Civilian Name"><br>
+          Durability: <input id="durability" size="3"  type="text" name="attributes" value="Enter Civilian Name"><br>
+          Power: <input id="power" size="3"  type="text" name="attributes" value="Enter Civilian Name"><br>
+          Combat: <input id="combat" size="3"  type="text" name="attributes" value="Enter Civilian Name"><br>
+          Powers: <input id="powers" type="text" name="powers" value="Seperate w/ commas"><br>
+          Weaknesses: <input id="weaknesses" type="text" name="weaknesses" value="Seperate w/ commas"><br>
+          <br>
+          <button type="button" onclick="createHero()">
+            Spawn Hero
+          </button>
+        </form>
+      </div>
+      <div class="merge">
+        <!--Merge heroes-->
+        Merge Heroes
+        <div class="mergeContainer">
+          <p>
+            Superhero + Superhero = Superhero 2.0 
+          </p>
+          <p>
+          Scroll to the hero you want to merge, and hit "Select Hero" buttons below. 
+          </p>
+          <button onclick="chooseHero()">
+            Select First Hero
+          </button>
+          <button onclick="chooseHero()">
+            Select Second Hero
+          </button> 
+          <span id="picked"></span>
+          Hero Name: <input type="text" id="heroName">
+          <br>
+          Civilian Name: <input type="text" id="civName">
+          <br>
+          Gender: <input type="text" id="gendR">
+          <br>
+          <p>Select a power and click "Add Power"</p>
+          <p>Choose 5 powers for your new Hero</p>
+          <p>Double click the text box below to see available options</p>
+          <input list="powerlist" id="powerslist">
+            <datalist id="powerlist">
+            </datalist>
+          <button onclick="addPower() ">Add Power</button>
+          <p id="pickedPowers">
+            Powers Chosen
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
