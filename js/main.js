@@ -1,8 +1,12 @@
+
+//Displays first Hero
 $(document).ready(function(){
   getHero()
 })
 
-var url = "https://hero-merge.herokuapp.com/133f7e2c/heroes/"
+
+//edit API key here
+var url = "https://hero-merge.herokuapp.com/b34ec9d5/heroes/"
 
 
 //After getHero retrieves Data, showHero displays it
@@ -33,6 +37,7 @@ var clearDiv = function(){
   $('.hero').html("");
 }
 
+// Keep track of displayed hero
 var currentHero = 1;
 
 var nextHero = function(){
@@ -120,6 +125,7 @@ function mergeInstead(){
   $('.create').css("display", "none");
 }
 
+//updates chosen heroes
 var chooseHero = function(id){
   $.getJSON(url  + currentHero.toString(), function(data){
     if (hero1 === ""){
@@ -130,6 +136,7 @@ var chooseHero = function(id){
         $('#picked').append("<p>Hero 2: " + data.hero_name);
     } 
     if(hero1 !== "" && hero2 !== ""){
+      //adds collective powers of heroes into dropdown
       heroTraits();
     }
     console.log(data);
@@ -138,6 +145,8 @@ var chooseHero = function(id){
 var hero1 = "";
 var hero2 = "";
 
+
+//hero constructor obj
 function Hero(hero_name, real_name, gender, attributes, powers, weaknesses){
   this.hero_name = hero_name;
   this.real_name = real_name;
@@ -147,6 +156,7 @@ function Hero(hero_name, real_name, gender, attributes, powers, weaknesses){
   this.weaknesses = weaknesses; 
 }
 
+//adds powers to list of options
 var heroTraits = function(){
   for(x = 0; x < hero1.powers.length; x++){
     $('#powerlist').append("<option value='" + hero1.powers[x] +"'>")
@@ -157,6 +167,8 @@ var heroTraits = function(){
 };
 
 var heroPowers = [];
+
+//adds selected power heroPowers array
 var addPower = function(){
   if (heroPowers.length < 5){
     heroPowers.push($('#powerslist').val())
@@ -167,6 +179,8 @@ var addPower = function(){
   }
 }
 var mergedHero = "";
+
+//Pulls all necessary data, creates the merged hero
 var mergeHero = function(){
   var newName = $('#heroName').val();
   var civName = $('#civName').val();
@@ -187,6 +201,7 @@ var mergeHero = function(){
 
 }
 
+//posts the merged hero 
 var addMergedHero = function(){
   $.post( {
     url: url,
@@ -199,14 +214,4 @@ var addMergedHero = function(){
     }
 });
 }
-/*
-***things I would do differently***
--add cool slide in effect with scroll
--change colors by hero, i.e. Batman has a yellow foreground and black background
--make API call return only specific hero, for some reason was buggy when I added just one hero
--Make "none" display instad of blank spaces for hero empty hero traits
--Wouldn't allow user to keep scrolling after there are no more heroes
--allow only logical input in form
--stop duplicate heroes from being created
---A lot of duplicate functionality in functions, would've changed that
-*/
+

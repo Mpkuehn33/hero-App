@@ -8,4 +8,20 @@ Find at https://hero-merge.herokuapp.com/getApiKey
 
 App is not fully completed, but has basic working functionality/design
 
+***HOW TO USE***
+    View Existing Heroes
+        Scroll through heroes with "Previous" and "Next" buttons
+    Create Your Own Hero
+        Fill out information in full
+        click "Spawn Hero"
+        A new hero will be added to existing heroes list based on user input
+    Merge Two Heroes
+        Scroll to first hero to be merged, hit "Select First Hero"
+        Scroll to second hero to be merged, hit "Select Second Hero"
+        Fill out inputs
+        Double click power box, list of collective powers of 2 heroes will show up
+        Select a power. Hit Add Power.
+        Repeat 4 more times. 
+        Hit "Merge Hero", then your Hero will be added to existing hero list
+
 
